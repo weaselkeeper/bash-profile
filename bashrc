@@ -2,6 +2,9 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+#If fedora 21
+source  /usr/share/git-core/contrib/completion/git-prompt.sh
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
