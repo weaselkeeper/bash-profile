@@ -2,8 +2,15 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-#If fedora 21
-source  /usr/share/git-core/contrib/completion/git-prompt.sh
+
+#Set our distro
+export `grep -h ID /etc/*release`
+
+case $ID in
+ fedora) #If fedora 
+    source  /usr/share/git-core/contrib/completion/git-prompt.sh ;;
+
+esac
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
